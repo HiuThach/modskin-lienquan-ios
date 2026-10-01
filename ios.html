@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Tải iOS - Liên Quân</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    min-height:100%;
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    background:#030711;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(0,174,255,.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(118,0,255,.15),
+            transparent 30%
+        ),
+        #030711;
+}
+
+.box{
+
+    width:100%;
+    max-width:460px;
+
+    padding:32px 24px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 20px 70px rgba(0,0,0,.45);
+
+    text-align:center;
+}
+
+.icon{
+
+    width:70px;
+    height:70px;
+
+    margin:0 auto 18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    font-size:34px;
+
+    background:rgba(0,180,255,.10);
+
+    border:1px solid rgba(0,200,255,.25);
+
+    box-shadow:
+        0 0 30px rgba(0,190,255,.12);
+}
+
+h1{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff,
+            #9eeaff,
+            #65d8ff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.description{
+
+    color:#8c9aaa;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    margin-bottom:24px;
+}
+
+/* INPUT */
+
+input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 16px;
+
+    border-radius:13px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    outline:none;
+
+    background:rgba(0,0,0,.35);
+
+    color:white;
+
+    text-align:center;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+}
+
+input:focus{
+
+    border-color:
+        rgba(0,200,255,.7);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,190,255,.10);
+}
+
+/* BUTTON */
+
+.btn{
+
+    width:100%;
+
+    height:52px;
+
+    border:0;
+
+    border-radius:13px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    letter-spacing:.8px;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.25s;
+}
+
+.confirm{
+
+    background:
+        linear-gradient(
+            100deg,
+            #008cff,
+            #00cfff
+        );
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,170,255,.25);
+}
+
+.confirm:hover{
+
+    transform:scale(1.02);
+
+    filter:brightness(1.12);
+}
+
+/* LOOTABLY */
+
+.offer{
+
+    margin-top:12px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #00a968,
+            #00e887
+        );
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,255,140,.18);
+}
+
+.offer:hover{
+
+    transform:scale(1.02);
+
+    filter:brightness(1.10);
+}
+
+/* MESSAGE */
+
+#message{
+
+    min-height:20px;
+
+    margin-top:12px;
+
+    font-size:12px;
+
+    color:#ff9d9d;
+
+    line-height:1.5;
+}
+
+/* BACK */
+
+.back{
+
+    display:block;
+
+    margin-top:20px;
+
+    color:#687789;
+
+    text-decoration:none;
+
+    font-size:12px;
+}
+
+.back:hover{
+
+    color:#9aaabd;
+}
+
+.note{
+
+    margin-top:20px;
+
+    color:#4f5b6b;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    body{
+        padding:15px;
+    }
+
+    .box{
+        padding:28px 18px;
+        border-radius:21px;
+    }
+
+    h1{
+        font-size:25px;
+    }
+
+    .description{
+        font-size:12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+
+    <div class="icon">
+        🍎
+    </div>
+
+
+    <h1>
+        TẢI MOD iOS
+    </h1>
+
+
+    <p class="description">
+        Nhập mã tải để tiếp tục tải file dành cho
+        iPhone và iPad.
+    </p>
+
+
+    <input
+        id="code"
+        type="text"
+        placeholder="NHẬP MÃ TẢI"
+        autocomplete="off"
+    >
+
+
+    <button
+        class="btn confirm"
+        onclick="checkCode()"
+    >
+        XÁC NHẬN MÃ
+    </button>
+
+
+    <div id="message"></div>
+
+
+    <!--
+        SAU KHI LOOTABLY DUYỆT:
+        THAY LOOTABLY_LINK_HERE
+        BẰNG LINK OFFERWALL CỦA BẠN
+    -->
+
+    <a
+        class="btn offer"
+        href="LOOTABLY_LINK_HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        🎁 TÌM MÃ BẰNG CÁCH XEM QUẢNG CÁO
+    </a>
+
+
+    <a
+        class="back"
+        href="index.html"
+    >
+        ← QUAY LẠI TRANG CHỦ
+    </a>
+
+
+    <div class="note">
+        Hoàn thành nhiệm vụ hợp lệ để nhận mã theo
+        chương trình của website.
+    </div>
+
+
+</div>
+
+
+<script>
+
+/*
+=================================================
+KIỂM TRA MÃ
+=================================================
+
+Đây hiện chỉ là DEMO.
+
+Khi bạn có hệ thống cấp mã thật,
+không nên để danh sách mã bí mật trực tiếp
+trong JavaScript vì người dùng có thể xem
+source của trang.
+
+*/
+
+function checkCode(){
+
+    const input =
+        document
+        .getElementById("code");
+
+    const message =
+        document
+        .getElementById("message");
+
+    const code =
+        input.value
+        .trim()
+        .toUpperCase();
+
+
+    if(!code){
+
+        message.style.color =
+            "#ff9d9d";
+
+        message.textContent =
+            "Vui lòng nhập mã tải.";
+
+        return;
+    }
+
+
+    /*
+        MÃ DEMO
+
+        Bạn có thể xóa phần này khi có
+        hệ thống mã thật.
+    */
+
+    const demoCodes = [
+        "DEMO2026"
+    ];
+
+
+    if(demoCodes.includes(code)){
+
+        message.style.color =
+            "#70ffba";
+
+        message.textContent =
+            "Mã hợp lệ. Có thể tiếp tục tải.";
+
+        /*
+            SAU NÀY ĐẶT LINK FILE TẢI
+            VÀO ĐÂY.
+
+            Ví dụ:
+
+            window.location.href =
+            "link-file-cua-ban";
+        */
+
+    }else{
+
+        message.style.color =
+            "#ff9d9d";
+
+        message.textContent =
+            "Mã không hợp lệ hoặc đã hết hạn.";
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

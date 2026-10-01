@@ -5,10 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tải iOS - Liên Quân</title>
 
@@ -28,6 +25,7 @@ html,body{
 }
 
 body{
+
     min-height:100vh;
 
     display:flex;
@@ -49,6 +47,9 @@ body{
         ),
         #030711;
 }
+
+
+/* ================= BOX ================= */
 
 .box{
 
@@ -77,6 +78,9 @@ body{
     text-align:center;
 }
 
+
+/* ================= ICON ================= */
+
 .icon{
 
     width:70px;
@@ -100,6 +104,9 @@ body{
         0 0 30px rgba(0,190,255,.12);
 }
 
+
+/* ================= TITLE ================= */
+
 h1{
 
     font-size:28px;
@@ -109,7 +116,7 @@ h1{
     background:
         linear-gradient(
             120deg,
-            #fff,
+            #ffffff,
             #9eeaff,
             #65d8ff
         );
@@ -118,6 +125,9 @@ h1{
 
     color:transparent;
 }
+
+
+/* ================= DESCRIPTION ================= */
 
 .description{
 
@@ -130,7 +140,8 @@ h1{
     margin-bottom:24px;
 }
 
-/* INPUT */
+
+/* ================= INPUT ================= */
 
 input{
 
@@ -157,6 +168,10 @@ input{
     margin-bottom:12px;
 }
 
+input::placeholder{
+    color:#667386;
+}
+
 input:focus{
 
     border-color:
@@ -167,7 +182,8 @@ input:focus{
         rgba(0,190,255,.10);
 }
 
-/* BUTTON */
+
+/* ================= BUTTON ================= */
 
 .btn{
 
@@ -200,6 +216,9 @@ input:focus{
     transition:.25s;
 }
 
+
+/* XÁC NHẬN */
+
 .confirm{
 
     background:
@@ -221,7 +240,8 @@ input:focus{
     filter:brightness(1.12);
 }
 
-/* LOOTABLY */
+
+/* ================= LOOTABLY ================= */
 
 .offer{
 
@@ -246,7 +266,8 @@ input:focus{
     filter:brightness(1.10);
 }
 
-/* MESSAGE */
+
+/* ================= MESSAGE ================= */
 
 #message{
 
@@ -256,12 +277,109 @@ input:focus{
 
     font-size:12px;
 
-    color:#ff9d9d;
-
     line-height:1.5;
 }
 
-/* BACK */
+
+/* ================= DOWNLOAD AREA ================= */
+
+#downloadArea{
+
+    display:none;
+
+    margin-top:18px;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    background:rgba(0,0,0,.25);
+
+    border:1px solid rgba(0,200,255,.20);
+}
+
+.download-title{
+
+    font-size:13px;
+
+    font-weight:800;
+
+    color:#70ddff;
+
+    margin-bottom:10px;
+}
+
+
+/* LINK */
+
+.link-box{
+
+    display:flex;
+
+    gap:8px;
+
+    width:100%;
+}
+
+#driveLink{
+
+    flex:1;
+
+    min-width:0;
+
+    height:45px;
+
+    padding:0 10px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:rgba(0,0,0,.35);
+
+    color:#9eeaff;
+
+    font-size:11px;
+
+    outline:none;
+}
+
+
+/* COPY */
+
+.copy-btn{
+
+    width:80px;
+
+    height:45px;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #008cff,
+            #00cfff
+        );
+
+    color:white;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+.copy-btn:active{
+
+    transform:scale(.96);
+}
+
+
+/* ================= BACK ================= */
 
 .back{
 
@@ -281,6 +399,9 @@ input:focus{
     color:#9aaabd;
 }
 
+
+/* ================= NOTE ================= */
+
 .note{
 
     margin-top:20px;
@@ -292,7 +413,8 @@ input:focus{
     line-height:1.5;
 }
 
-/* MOBILE */
+
+/* ================= MOBILE ================= */
 
 @media(max-width:500px){
 
@@ -301,7 +423,9 @@ input:focus{
     }
 
     .box{
+
         padding:28px 18px;
+
         border-radius:21px;
     }
 
@@ -311,6 +435,15 @@ input:focus{
 
     .description{
         font-size:12px;
+    }
+
+    #driveLink{
+        font-size:10px;
+    }
+
+    .copy-btn{
+        width:75px;
+        font-size:10px;
     }
 
 }
@@ -326,21 +459,30 @@ input:focus{
 <div class="box">
 
 
+    <!-- ICON -->
+
     <div class="icon">
         🍎
     </div>
 
+
+    <!-- TITLE -->
 
     <h1>
         TẢI MOD iOS
     </h1>
 
 
+    <!-- DESCRIPTION -->
+
     <p class="description">
-        Nhập mã tải để tiếp tục tải file dành cho
-        iPhone và iPad.
+
+        Nhập mã tải của bạn để tiếp tục.
+
     </p>
 
+
+    <!-- INPUT -->
 
     <input
         id="code"
@@ -350,21 +492,65 @@ input:focus{
     >
 
 
+    <!-- CONFIRM -->
+
     <button
         class="btn confirm"
         onclick="checkCode()"
     >
+
         XÁC NHẬN MÃ
+
     </button>
 
+
+    <!-- MESSAGE -->
 
     <div id="message"></div>
 
 
+    <!-- DOWNLOAD LINK -->
+
+    <div id="downloadArea">
+
+        <div class="download-title">
+
+            ✅ MÃ HỢP LỆ — LINK TẢI
+
+        </div>
+
+
+        <div class="link-box">
+
+            <input
+                id="driveLink"
+                type="text"
+                value="https://drive.google.com/drive/folders/1jK2miINvCV6vr10BZu66KNyXV4J2PLRt?usp=sharing"
+                readonly
+            >
+
+
+            <button
+                class="copy-btn"
+                onclick="copyLink()"
+            >
+
+                COPY
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOOTABLY -->
+
     <!--
         SAU KHI LOOTABLY DUYỆT:
-        THAY LOOTABLY_LINK_HERE
-        BẰNG LINK OFFERWALL CỦA BẠN
+
+        Thay LOOTABLY_LINK_HERE
+        bằng link Offerwall thật của bạn.
     -->
 
     <a
@@ -373,21 +559,30 @@ input:focus{
         target="_blank"
         rel="noopener noreferrer"
     >
+
         🎁 TÌM MÃ BẰNG CÁCH XEM QUẢNG CÁO
+
     </a>
 
+
+    <!-- BACK -->
 
     <a
         class="back"
         href="index.html"
     >
+
         ← QUAY LẠI TRANG CHỦ
+
     </a>
 
 
+    <!-- NOTE -->
+
     <div class="note">
-        Hoàn thành nhiệm vụ hợp lệ để nhận mã theo
-        chương trình của website.
+
+        Hoàn thành nhiệm vụ hợp lệ để nhận mã tải.
+
     </div>
 
 
@@ -396,35 +591,38 @@ input:focus{
 
 <script>
 
-/*
-=================================================
-KIỂM TRA MÃ
-=================================================
 
-Đây hiện chỉ là DEMO.
+/* ==========================================
+   LINK GOOGLE DRIVE
+========================================== */
 
-Khi bạn có hệ thống cấp mã thật,
-không nên để danh sách mã bí mật trực tiếp
-trong JavaScript vì người dùng có thể xem
-source của trang.
+const driveURL =
+"https://drive.google.com/drive/folders/1jK2miINvCV6vr10BZu66KNyXV4J2PLRt?usp=sharing";
 
-*/
+
+/* ==========================================
+   KIỂM TRA MÃ
+========================================== */
 
 function checkCode(){
 
     const input =
-        document
-        .getElementById("code");
+        document.getElementById("code");
 
     const message =
-        document
-        .getElementById("message");
+        document.getElementById("message");
+
+    const downloadArea =
+        document.getElementById("downloadArea");
+
 
     const code =
         input.value
         .trim()
         .toUpperCase();
 
+
+    /* Không nhập mã */
 
     if(!code){
 
@@ -434,21 +632,33 @@ function checkCode(){
         message.textContent =
             "Vui lòng nhập mã tải.";
 
+        downloadArea.style.display =
+            "none";
+
         return;
     }
 
 
     /*
-        MÃ DEMO
+    ==========================================
+    MÃ DEMO
 
-        Bạn có thể xóa phần này khi có
-        hệ thống mã thật.
+    Tạm thời mã:
+    DEMO2026
+
+    Sau này có hệ thống mã thật thì
+    thay phần kiểm tra này.
+    ==========================================
     */
 
     const demoCodes = [
+
         "DEMO2026"
+
     ];
 
+
+    /* MÃ ĐÚNG */
 
     if(demoCodes.includes(code)){
 
@@ -456,26 +666,90 @@ function checkCode(){
             "#70ffba";
 
         message.textContent =
-            "Mã hợp lệ. Có thể tiếp tục tải.";
+            "Mã hợp lệ! Link tải đã được mở.";
 
-        /*
-            SAU NÀY ĐẶT LINK FILE TẢI
-            VÀO ĐÂY.
 
-            Ví dụ:
+        /* Hiện khu vực link */
 
-            window.location.href =
-            "link-file-cua-ban";
-        */
+        downloadArea.style.display =
+            "block";
 
-    }else{
+
+        /* Đảm bảo link đúng */
+
+        document.getElementById("driveLink").value =
+            driveURL;
+
+
+    }
+
+    /* MÃ SAI */
+
+    else{
 
         message.style.color =
             "#ff9d9d";
 
         message.textContent =
             "Mã không hợp lệ hoặc đã hết hạn.";
+
+        downloadArea.style.display =
+            "none";
+
     }
+
+}
+
+
+/* ==========================================
+   COPY LINK
+========================================== */
+
+function copyLink(){
+
+    const link =
+        document.getElementById("driveLink").value;
+
+    const button =
+        document.querySelector(".copy-btn");
+
+
+    navigator.clipboard.writeText(link)
+    .then(function(){
+
+        button.textContent =
+            "ĐÃ COPY";
+
+        setTimeout(function(){
+
+            button.textContent =
+                "COPY";
+
+        },2000);
+
+    })
+    .catch(function(){
+
+        /* Fallback cho trình duyệt không hỗ trợ */
+
+        const input =
+            document.getElementById("driveLink");
+
+        input.select();
+
+        document.execCommand("copy");
+
+        button.textContent =
+            "ĐÃ COPY";
+
+        setTimeout(function(){
+
+            button.textContent =
+                "COPY";
+
+        },2000);
+
+    });
 
 }
 

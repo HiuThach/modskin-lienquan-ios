@@ -25,7 +25,6 @@ html,body{
 }
 
 body{
-
     min-height:100vh;
 
     display:flex;
@@ -141,155 +140,13 @@ h1{
 }
 
 
-/* ================= INPUT ================= */
-
-input{
-
-    width:100%;
-
-    height:52px;
-
-    padding:0 16px;
-
-    border-radius:13px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    outline:none;
-
-    background:rgba(0,0,0,.35);
-
-    color:white;
-
-    text-align:center;
-
-    font-size:15px;
-
-    margin-bottom:12px;
-}
-
-input::placeholder{
-    color:#667386;
-}
-
-input:focus{
-
-    border-color:
-        rgba(0,200,255,.7);
-
-    box-shadow:
-        0 0 20px
-        rgba(0,190,255,.10);
-}
-
-
-/* ================= BUTTON ================= */
-
-.btn{
-
-    width:100%;
-
-    height:52px;
-
-    border:0;
-
-    border-radius:13px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-decoration:none;
-
-    font-size:14px;
-
-    font-weight:800;
-
-    letter-spacing:.8px;
-
-    cursor:pointer;
-
-    color:white;
-
-    transition:.25s;
-}
-
-
-/* XÁC NHẬN */
-
-.confirm{
-
-    background:
-        linear-gradient(
-            100deg,
-            #008cff,
-            #00cfff
-        );
-
-    box-shadow:
-        0 8px 30px
-        rgba(0,170,255,.25);
-}
-
-.confirm:hover{
-
-    transform:scale(1.02);
-
-    filter:brightness(1.12);
-}
-
-
-/* ================= LOOTABLY ================= */
-
-.offer{
-
-    margin-top:12px;
-
-    background:
-        linear-gradient(
-            100deg,
-            #00a968,
-            #00e887
-        );
-
-    box-shadow:
-        0 8px 30px
-        rgba(0,255,140,.18);
-}
-
-.offer:hover{
-
-    transform:scale(1.02);
-
-    filter:brightness(1.10);
-}
-
-
-/* ================= MESSAGE ================= */
-
-#message{
-
-    min-height:20px;
-
-    margin-top:12px;
-
-    font-size:12px;
-
-    line-height:1.5;
-}
-
-
 /* ================= DOWNLOAD AREA ================= */
 
-#downloadArea{
+.download-area{
 
-    display:none;
+    margin-top:10px;
 
-    margin-top:18px;
-
-    padding:16px;
+    padding:18px;
 
     border-radius:16px;
 
@@ -300,17 +157,17 @@ input:focus{
 
 .download-title{
 
-    font-size:13px;
+    font-size:14px;
 
     font-weight:800;
 
     color:#70ddff;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 
-/* LINK */
+/* ================= LINK BOX ================= */
 
 .link-box{
 
@@ -327,9 +184,9 @@ input:focus{
 
     min-width:0;
 
-    height:45px;
+    height:48px;
 
-    padding:0 10px;
+    padding:0 11px;
 
     border-radius:10px;
 
@@ -345,13 +202,13 @@ input:focus{
 }
 
 
-/* COPY */
+/* ================= COPY BUTTON ================= */
 
 .copy-btn{
 
     width:80px;
 
-    height:45px;
+    height:48px;
 
     border:0;
 
@@ -371,11 +228,71 @@ input:focus{
     font-weight:800;
 
     cursor:pointer;
+
+    transition:.2s;
+}
+
+.copy-btn:hover{
+
+    filter:brightness(1.12);
+
 }
 
 .copy-btn:active{
 
     transform:scale(.96);
+
+}
+
+
+/* ================= OPEN DRIVE ================= */
+
+.open-drive{
+
+    width:100%;
+
+    height:50px;
+
+    margin-top:12px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #00a968,
+            #00e887
+        );
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,255,140,.18);
+
+    transition:.2s;
+}
+
+.open-drive:hover{
+
+    transform:scale(1.02);
+
+    filter:brightness(1.1);
+
 }
 
 
@@ -438,7 +355,7 @@ input:focus{
     }
 
     #driveLink{
-        font-size:10px;
+        font-size:9px;
     }
 
     .copy-btn{
@@ -477,45 +394,18 @@ input:focus{
 
     <p class="description">
 
-        Nhập mã tải của bạn để tiếp tục.
+        Link tải dành cho iPhone và iPad.
 
     </p>
 
 
-    <!-- INPUT -->
+    <!-- ================= LINK TẢI ================= -->
 
-    <input
-        id="code"
-        type="text"
-        placeholder="NHẬP MÃ TẢI"
-        autocomplete="off"
-    >
-
-
-    <!-- CONFIRM -->
-
-    <button
-        class="btn confirm"
-        onclick="checkCode()"
-    >
-
-        XÁC NHẬN MÃ
-
-    </button>
-
-
-    <!-- MESSAGE -->
-
-    <div id="message"></div>
-
-
-    <!-- DOWNLOAD LINK -->
-
-    <div id="downloadArea">
+    <div class="download-area">
 
         <div class="download-title">
 
-            ✅ MÃ HỢP LỆ — LINK TẢI
+            📥 LINK TẢI iOS
 
         </div>
 
@@ -541,31 +431,24 @@ input:focus{
 
         </div>
 
+
+        <!-- MỞ GOOGLE DRIVE -->
+
+        <a
+            class="open-drive"
+            href="https://drive.google.com/drive/folders/1jK2miINvCV6vr10BZu66KNyXV4J2PLRt?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            📂 MỞ GOOGLE DRIVE
+
+        </a>
+
     </div>
 
 
-    <!-- LOOTABLY -->
-
-    <!--
-        SAU KHI LOOTABLY DUYỆT:
-
-        Thay LOOTABLY_LINK_HERE
-        bằng link Offerwall thật của bạn.
-    -->
-
-    <a
-        class="btn offer"
-        href="LOOTABLY_LINK_HERE"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-
-        🎁 TÌM MÃ BẰNG CÁCH XEM QUẢNG CÁO
-
-    </a>
-
-
-    <!-- BACK -->
+    <!-- ================= BACK ================= -->
 
     <a
         class="back"
@@ -577,11 +460,10 @@ input:focus{
     </a>
 
 
-    <!-- NOTE -->
-
     <div class="note">
 
-        Hoàn thành nhiệm vụ hợp lệ để nhận mã tải.
+        Nếu không mở được link, hãy bấm COPY và dán
+        link vào trình duyệt.
 
     </div>
 
@@ -590,120 +472,6 @@ input:focus{
 
 
 <script>
-
-
-/* ==========================================
-   LINK GOOGLE DRIVE
-========================================== */
-
-const driveURL =
-"https://drive.google.com/drive/folders/1jK2miINvCV6vr10BZu66KNyXV4J2PLRt?usp=sharing";
-
-
-/* ==========================================
-   KIỂM TRA MÃ
-========================================== */
-
-function checkCode(){
-
-    const input =
-        document.getElementById("code");
-
-    const message =
-        document.getElementById("message");
-
-    const downloadArea =
-        document.getElementById("downloadArea");
-
-
-    const code =
-        input.value
-        .trim()
-        .toUpperCase();
-
-
-    /* Không nhập mã */
-
-    if(!code){
-
-        message.style.color =
-            "#ff9d9d";
-
-        message.textContent =
-            "Vui lòng nhập mã tải.";
-
-        downloadArea.style.display =
-            "none";
-
-        return;
-    }
-
-
-    /*
-    ==========================================
-    MÃ DEMO
-
-    Tạm thời mã:
-    DEMO2026
-
-    Sau này có hệ thống mã thật thì
-    thay phần kiểm tra này.
-    ==========================================
-    */
-
-    const demoCodes = [
-
-        "DEMO2026"
-
-    ];
-
-
-    /* MÃ ĐÚNG */
-
-    if(demoCodes.includes(code)){
-
-        message.style.color =
-            "#70ffba";
-
-        message.textContent =
-            "Mã hợp lệ! Link tải đã được mở.";
-
-
-        /* Hiện khu vực link */
-
-        downloadArea.style.display =
-            "block";
-
-
-        /* Đảm bảo link đúng */
-
-        document.getElementById("driveLink").value =
-            driveURL;
-
-
-    }
-
-    /* MÃ SAI */
-
-    else{
-
-        message.style.color =
-            "#ff9d9d";
-
-        message.textContent =
-            "Mã không hợp lệ hoặc đã hết hạn.";
-
-        downloadArea.style.display =
-            "none";
-
-    }
-
-}
-
-
-/* ==========================================
-   COPY LINK
-========================================== */
 
 function copyLink(){
 
@@ -715,6 +483,7 @@ function copyLink(){
 
 
     navigator.clipboard.writeText(link)
+
     .then(function(){
 
         button.textContent =
@@ -728,14 +497,18 @@ function copyLink(){
         },2000);
 
     })
-    .catch(function(){
 
-        /* Fallback cho trình duyệt không hỗ trợ */
+    .catch(function(){
 
         const input =
             document.getElementById("driveLink");
 
         input.select();
+
+        input.setSelectionRange(
+            0,
+            99999
+        );
 
         document.execCommand("copy");
 
